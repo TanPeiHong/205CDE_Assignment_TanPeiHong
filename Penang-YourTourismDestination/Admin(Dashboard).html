@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+		<!--Load an icon library-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!-- Popper.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<link rel="icon" href="Images/Penang_Icon.png" type="image/png" />
+		<title>Penang - Your Tourism Destination</title>
+		
+		<style>
+			.container-dashboard {
+				border: 6px solid #f1f1f1;
+				margin: 150px 300px;
+				padding: 25px;
+				text-align: center;
+			}
+			
+			/* Style buttons */
+			.btn {
+				background-color: DodgerBlue; /* Blue background */
+				border: none; /* Remove borders */
+				color: white; /* White text */
+				padding: 12px 16px; /* Some padding */
+				margin: 5px; /* Some margin */
+				font-size: 16px; /* Set a font size */
+				cursor: pointer; /* Mouse pointer on hover */
+			}
+
+			/* Darker background on mouse-over */
+			.btn:hover {
+				background-color: RoyalBlue;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Function for Logout
+			function logout(){
+				//Ask the user whether want to logout
+				var r = confirm("Are you sure want to Logout?");
+				
+				if (r == true) {
+					//Redirect to Admin(Login).php page
+					var URL = "Admin(Login).php";
+					
+					document.location.href = URL;
+				}
+				
+				else {
+					//Do nothing
+				}
+			}
+		</script>
+		
+		<!-- Top navigation bars -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<!-- Logo -->
+			<a class="navbar-brand" href="Home.html">
+				<img src="Images/Penang_Icon.png" height="35" width="35">
+			</a>
+			
+			<!-- Links -->
+			<ul class="navbar-nav nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link active" href="Admin(Dashboard).html">Home</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="Admin(Display).php">View Records</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link disabled" href="Admin(Delete).php">Delete Records</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<ul class="nav justify-content-end">
+			<li class="nav-item">
+				<button class="btn" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+			</li>
+		</ul>
+		
+		<div class="container-dashboard">
+			<h1>Welcome to Admin Control Panel (Dashboard)!</h1>
+			
+			<br /><hr>
+			
+			<p>&#128516; Please select what you want to do at the navigation bar. &#128516;</p>
+			
+			<hr>
+		</div>
+	</body>
+</html>

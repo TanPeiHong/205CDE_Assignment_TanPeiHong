@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="Styles.css">
+		<link rel="stylesheet" href="Styles(Slideshow).css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="icon" href="Images/Penang_Icon.png" type="image/png" />
+		<title>Penang - Your Tourism Destination</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Repeats a given function at every given time-interval
+			var myVar = setInterval(myTimer, 1000);
+			
+			//This function called "myTimer" once every second (like a digital watch)
+			function myTimer() {
+				var d = new Date();
+				
+				//Display the current time
+				document.getElementById("time").innerHTML = d.toLocaleTimeString();
+			}
+			
+			//Function for toggle to dark mode
+			function modeFunction(){
+				var element = document.body;
+				element.classList.toggle("dark-mode");
+			}
+		</script>
+		
+		<!-- Header -->
+		<header>
+			<p id="time" style="color:black; position:absolute; top:0px; right:0px;"></p>
+			
+			<h1><img src="Images/Penang_Icon.png" style="width:45px; height:45px;"> Penang - Your Tourism Destination</h1>
+		</header>
+		
+		<!-- Top navigation bars -->
+		<div class="topnav">
+			<a class="active" href="Home.html">Home</a>
+			<a href="Culture-Heritage.html">Culture & Heritage</a>
+			<a href="Nature-Adventure.html">Nature & Adventure</a>
+			<a href="Food-Lifestyle.html">Food & Lifestyle</a>
+			<a href="AboutUs.html">About Us</a>
+			<a href="ContactUs.php">Contact Us</a>
+			<a href="Admin(Login).php">Admin</a>
+			
+			<!-- Dropdown bars -->
+			<div class="dropdown">
+				<button class="dropbtn">Appearance
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<button onclick="modeFunction()">Light / Dark mode</button>
+				</div>
+			</div> 
+		</div>
+		
+		<!-- Slideshow -->
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="Images/Penang_Bridge_2nd.jpg" style="width:100%" height="600">
+				<div class="text">Sultan Abdul Halim Muadzam Shah Bridge</div>
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="Images/George_Town.jpg" style="width:100%" height="600">
+				<div class="text">George Town Street</div>
+			</div>
+			
+			<div class="mySlides fade">
+				<img src="Images/Komtar.jpg" style="width:100%" height="600">
+				<div class="text">Kompleks Tun Abdul Razak (KOMTAR)</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//Function for Automatic Slideshow
+			var slideIndex = 0;
+			showSlides(); //Display the slideshow
+
+			function showSlides(){
+				var i;
+				
+				//All of the slides in the document
+				var slides = document.getElementsByClassName("mySlides");
+				
+				//Hide each of the slides
+				for (i = 0; i < slides.length; i++){
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				
+				//If slide # is greater than the total number of slides
+				if (slideIndex > slides.length){
+					slideIndex = 1;
+				}
+				
+				//Set the current slide to display as a block element
+				slides[slideIndex-1].style.display = "block";
+				setTimeout(showSlides, 5000); //Change image every 5 seconds
+			}
+		</script>
+		
+		<br /><br /><br />
+		<div class="row">
+			<h2 style="color:#ff8533;">Culture & Heritage</h2>
+			
+			<a href="Culture-Heritage.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Heritage_Zones.jpg" style="width:100%" height="200">
+					<div class="container">
+						<p>Heritage Zones</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Culture-Heritage.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Street_Art.jpg" style="width:100%" height="200">
+					<div class="container">
+						<p>Street Art</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Culture-Heritage.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Places_Of_Worship.jpg" style="width:100%" height="200">
+					<div class="container">
+						<p>Places of Worship</p>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+		
+		<br /><br />
+		<div class="row">
+			<h2 style="color:#00e600;">Nature & Adventure</h2>
+			
+			<a href="Nature-Adventure.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Adventure_And_Nature.jpg" style="width:100%" height="200">
+					<div class="container1">
+						<p>Adventure and Nature</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Nature-Adventure.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Parks_And_Gardens.jpg" style="width:100%" height="200">
+					<div class="container1">
+						<p>Parks and Gardens</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Nature-Adventure.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Recreation.jpg" style="width:100%" height="200">
+					<div class="container1">
+						<p>Recreation</p>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+		
+		<br /><br />
+		<div class="row">
+			<h2 style="color:#ff3385;">Food & Lifestyle</h2>
+			
+			<a href="Food-Lifestyle.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Food_And_Beverages.jpg" style="width:100%" height="200">
+					<div class="container2">
+						<p>Food and Beverages</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Food-Lifestyle.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Shopping_And_Spa.jpg" style="width:100%" height="200">
+					<div class="container2">
+						<p>Shopping and Spa</p>
+					</div>
+				</div>
+			</div>
+			</a>
+			
+			<a href="Food-Lifestyle.html">
+			<div class="card">
+				<div class="button">
+					<img src="Images/Entertainment.jpg" style="width:100%" height="200">
+					<div class="container2">
+						<p>Entertainment</p>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+		
+		<br /><br /><br />
+		<!-- Footer -->
+		<footer>
+			<p>Copyrights &copy; 2020 All Rights Reserved by Penang - Your Tourism Destination</p>
+		</footer>
+	</body>
+</html>

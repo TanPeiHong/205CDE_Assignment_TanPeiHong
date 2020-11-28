@@ -1,0 +1,47 @@
+/* This CSS stylesheet is for Admin(Login) Form design */
+
+form {
+	border: 6px solid #f1f1f1;
+	margin-left: 550px;
+	margin-right: 550px;
+	background-color: white;
+}
+
+/* Style inputs with type="text" elements and type="password" elements */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+input[type=submit]:hover {
+	opacity: 0.8;
+}
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+img.admin {
+	width: 35%;
+	border-radius: 50%;
+}
+
+.containerBlock {
+	padding: 20px;
+}
